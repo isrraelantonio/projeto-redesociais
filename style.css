@@ -1,25 +1,25 @@
-@charset "utf-8";
-    *{
+@charset "utf-8"; /*Usamos essa configuração para que o css saiba lidar com os caracteres que usamos */
+    *{ /*Configuração global para retirar todo o padding ou margem dos elementos, além de decidirmos uma familia padrão para o arquivo */
         margin: 0px;
         padding: 0px;
         font-family: Arial, Helvetica, sans-serif;
     }
-    ::-webkit-scrollbar{
+    ::-webkit-scrollbar{ /*  1 Essa função retira de cena qualquer barra de rolagem, daí na hora de configurar a largura e altura do html e ou body,  aqui nós iremos zerar nossa altura e largura.Depois seja melhor customizar o 100vh ou 100vw do body e html depois dessa configuração */
         width: 0px;
         height: 0px;
     }
 
-html, body{
+html, body{ /*  2 Definimos a largura e altura da largura e altura do HTML e  BODY*/
     width: 99vw;
     height: 100vh;
    
 }
 body{
-    background:url(imagens/fundo.png) no-repeat center center ;
+    background:url(imagens/fundo.png) no-repeat center center ;/*7 Definimos a imagem a ficar no fundo do body, a fixamos, centralizamos, desativamos a repetição e adaptamos aos tamanhos de tela com o cover */
     background-size: cover;
     background-attachment: fixed;
 }
-main{
+main{ /* 3 Aqui para configutração do mais fizemos o mesmo ocupar toda a altura do body, numa posição relativa para fazermos uso da customização da posição do nosso select*/
     height: 100vh;
     position: relative;
   
@@ -27,40 +27,39 @@ main{
 
 }
 
-section#telefone{
+section#telefone{ /* 4 Ao configurar o section para a inserção da imagem do telefone  , colocamos uma posição absoluta até porque iremos mexer nela, e definimos uma altura e largura que na verdade deverá estar de acordo com altura e larguara da imagem, isso é possível pelo aplicativo do gimp. Nesse caso já está configurado.    */
     position: absolute;
-    top: 47%;
+    top: 47%;/* 5 nesse caso decidimos pelo posicionamento em porcentagem, ou seja, em metade no que diz respeito o nosso topo e nosso lado esquerdo. Pórem, a referencia para isso, será sempre a ponta superior esquerda, logo, deveremos fazer o uso do transform: translate(), usando a mesma porcnetagem para o topo e o ladado esquerdo, só que negativos, para deslocaren-se ao meio de forma correta, centralizando, agora de fato, o conteúdo. É algo customizavel e você pode optar pelo posicionamento que desejar*/
     left: 49%;
     transform: translate(-49%, -47%);
     height: 628px;
     width: 311px;
-    background:  url(imagens/frame-iphone.png) no-repeat;
+    background:  url(imagens/frame-iphone.png) no-repeat; /* 6 definimos a imagem do bacgorund do main e tiramos também a repetição do memso*/
    
 }
-    section#redes{
+    section#redes{ /* 14 Definimos como posição do nosso sections redes sociais um alinhamento de texto para o lado direito da tela, nesse caso é questão de gosto pois poderia ficar a cima em linhas, em baixo em limhas, emfim, fica a gosto de cada um.*/
         text-align: right;
-        margin-top: 10px;
-        padding-right: 10px;
+      
 
       
       
     }
 
-section#redes img{
+section#redes img{ /* 12 Aqui, definimos configurações para as imagens dentro dos nosso sections de id redes sociais, presentes em nossas imgs. Sua largura será de 60px, margem de 15px em relação a elas mesmas, e um arendondamento em uma elipse de 80%, que para mim é um bom aredondameto, atributo para arredondar imagens quadradas, Além disso, definimos um box-sizing: border-box para que a borda que você venha adicionar fazer parte da caixa da imagem */
     width: 60px;
     margin: 15px;
     border-radius: 80%;
    
     box-sizing: border-box;
    
-}section#redes img:hover{
+}section#redes img:hover{ /* 15 Essas definições são para sempre que o mouse entrar em contato com o elemento imgm dento da sections redes, as images  tranladem negativamente -3px a esquerda, e -3px para cima, também apresentará um box-shadow com intensidade e espalhamento adequado. A lém de definir uma transição de 0.5 segudos para que isso ocorra de forma suave. O transition pode ser específico,  é só antes de definir o tempo indicar qual recuros terá esse tempo, é o trnasform o box-shadow, fica a seu criterio decidir. */
     transform: translate(-3px, -3px);
     box-shadow: -1px 1px 10px rgba(255, 255, 255, 0.714);
-    
+    transition: 0.5s;
 }
 
 
-iframe#tela{
+iframe#tela{ /*10 Criamos a definição para o nosso iframe, o mesmo está como relativo pois iremos definir uma posição fíxa para o conteúdo, onde definimos para o iframe uma altura e largura dependedo do tamanho da tela, e isso tem que ser customizável. Em relacão ao telefone, que no caso diz respeito ao nosso section, definiremos um distanciamento do topo de 80px e distanciamento da esquerda de 22px, se encaixando perfeitamente ao tamanho da tela do aparelho*/
     position: relative;
     top: 80px;
     left: 22px;

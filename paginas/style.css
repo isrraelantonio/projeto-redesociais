@@ -1,20 +1,20 @@
-*{
+*{ /*Globalmente definimos para todos os elementos 0px de margin e passing, além de uma familia padrão*/
     margin: 0px;
     padding: 0px;   
     font-family: Arial, Helvetica, sans-serif;
 
 }
-::-webkit-scrollbar{
+::-webkit-scrollbar{ /* 19 Como já aprendemos tiramos a barra de rolagem*/
 width: 0px;
 height: 0px;
 }
-img{
+img{ /* 20 fizemos a imagem do body ocupar toda a largura da viewport*/
 width: 100vw;
 
 
 
 }
-a{
+a{ /*21 Definimos para os nossos links uma disposição em bloco, para o mesmo se posicionar abaixo do img, um padding de 20px em todas as direções, texto alinhado ao centro da caixa com cor branca, sem decoração, uma cor específica para o background e um peso bolder para o font-weight*/
 display: block;
 padding: 20px;
 text-align: center;
@@ -23,4 +23,7 @@ color: white;
 text-decoration: none;
 font-weight: bolder;
 
+}
+a:hover{ /* 22 Definimos um outro background em caso do mouse passar por cima da caixa do link*/
+    background-color: rgb(46, 46, 175) ;
 }

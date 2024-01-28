@@ -5,20 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
     <title>Projeto Redes Sociais</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css"> <!--Aqui fizemos a criação do link externo CSS para o HTML -->
 </head>
 <body>
-   <main>
-    <div id="tel">
-        <section id="telefone">
+   <main> <!--  1  Aqui dentro teremso a criação do main, o mesmo diz repetio a o conteúdo principal do site, o mesmo irá conter em seu interior dois sections, esse main é importante para que o mesmo esteja relativo em relação aos sections até para que os mesmos posam ser organizados de forma absoluta, onde podemos customizar o posicionamento do elemento-->
+   
+        <section id="telefone"> <!-- 2 A primeira section usada será a do telefone, a mesma, fará uso da imagem do telefone no meio  da página por isso o id tela, na mesma eu tambem pús um name só para usar na hora de por um iframe, fiz assim porque preferi.-->
             <iframe id="tela" name="vem" src="paginas/home.html" frameborder="0">
                 Seu navegador não é compatível com isso..
-            </iframe>
+            </iframe> <!--9 Nesse momento, criamos um iframe com o endereço da nossa página home para ser apresentada no iframe já ao carregar a página-->
         </section>
-    </div>
-    <section id="redes">
-        <a href="paginas/home.html" target="vem"><img src="imagens/home1.png" alt=""></a><br>
-        <a href="paginas/facebook.html" target="vem"> <img src="imagens/facebook1.png" alt=""></a><br>
+  
+    <section id="redes"> <!-- 3 A segunda section será a da rede social, na mesma será inseriso os botões clicaveis, que atualizará o frame para aparecer o site dentro do iframe -->
+
+        <!-- 11 Aqui, dentro do section para os botõe das redes sociais criamos váriso links, que irão nos direcionar a págians específicas e cada um deles terá um img com imagens para os botões das redes sociais-->
+        <a href="paginas/home.html" target="vem"><img src="imagens/home1.png" alt=""></a><br> <!-- 13 Para que aimagem esteja disposta uma abaixo da outra usei o br para quebra de linha-->
+        <a href="paginas/facebook.html" target="vem"> <img src="imagens/facebook1.png" alt=""></a><br> <!--23 Agora, é só por o link da página que corresponda a imagem da rede. Usando o target junto ao identificador, essa abertura acontecerá dentro do própio frame da página -->
         <a href="paginas/git.html" target="vem"> <img src="imagens/github1.png" alt=""></a><br>
         <a href="paginas/instagran.html" target="vem"><img src="imagens/intagran1.png" alt=""></a>
     </section>
